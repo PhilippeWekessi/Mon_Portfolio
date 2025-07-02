@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Wekessi Philippe</title>
+  <style>
+    :root {
+      --main-color: #0ef;
+      --bg-color: #1f242d;
+      --text-color: #fff;
+      --accent-color: #323946;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .cv-container {
+      max-width: 900px;
+      margin: auto;
+      background-color: var(--accent-color);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 2rem rgba(0, 255, 255, 0.1);
+    }
+
+    h1, h2 {
+      color: var(--main-color);
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .info span {
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skill {
+      background: var(--main-color);
+      color: var(--bg-color);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .btn-print {
+      display: inline-block;
+      margin: 1rem 0 2rem;
+      padding: 10px 20px;
+      background-color: var(--main-color);
+      color: var(--bg-color);
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-print:hover {
+      box-shadow: 0 0 1rem var(--main-color);
+    }
+
+    @media print {
+      .btn-print {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <button onclick="window.print()" class="btn-print">🖨️ Imprimer / Télécharger en PDF</button><br>
+
+    <h1>Mon CV</h1>
+
+    <h2>Wekessi Philippe</h2><br>
+    <p>Développeur Web & Mobile | Passionné par la technologie et la musique</p>
+
+    <div class="section info">
+      <span>Email :</span> wekessiphilippe@gmail.com<br>
+      <span>Téléphone :</span> +229 01 58 61 83 77 / 01 44 88 59 83 / 01 96 05 97 87 <br>
+      <span>Pays :</span> Bénin
+    </div>
+
+    <div class="section">
+      <h2>À propos de moi</h2>
+      <p>
+        Passionné par la création d'applications web et mobiles modernes, performantes et accessibles. 
+        J’aime allier esthétique, efficacité et expérience utilisateur dans mes projets. Je joue aussi de la guitare basse 🎸.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Compétences</h2>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">PHP</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">Flutter</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Expérience</h2>
+      <ul>
+        <li><strong>Chat X</strong> — Application de messagerie avec PHP, AJAX, MySQL</li>
+        <li><strong>Gestion des notes</strong> — Interface complète avec saisie, calcul et génération de bulletins</li>
+        <li><strong>Gestion des paiements</strong> — Application avec rôles et droits utilisateurs</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Formations</h2>
+      <ul>
+        <li>Licence SIL — UATM Gasa Formation en (2025 - 2026)</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
