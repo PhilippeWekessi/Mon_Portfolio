@@ -214,17 +214,10 @@ section::before {
     border: 5px solid var(--main-color);
     box-shadow: 0 0 25px rgba(var(--main-rgb), 0.45), 0 0 0 10px rgba(var(--accent-rgb), 0.08);
     transition: transform .3s ease, box-shadow .3s ease;
-    animation: floatImage 3s ease-in-out infinite;
 }
 
 .home-img img:hover {
-    transform: scale(1.05);
     box-shadow: 0 0 35px rgba(var(--accent-rgb), 0.55);
-}
-
-@keyframes floatImage {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-1.4rem); }
 }
 
 .social-media a {
@@ -1080,7 +1073,7 @@ section::before {
 .home-content > *:nth-child(5) { animation-delay: .5s; }
 .home-content > *:nth-child(6) { animation-delay: .6s; }
 
-/* 5. Photo d'accueil : entrée + anneau bleu/rouge qui tourne */
+/* 5. Entrée douce du portrait */
 @keyframes heroZoom {
     from { opacity: 0; scale: .85; }
     to   { opacity: 1; scale: 1; }
@@ -1092,25 +1085,13 @@ section::before {
     animation: heroZoom 1s cubic-bezier(.2, .7, .2, 1) .3s both;
 }
 
-.home-img::before {
-    content: '';
-    position: absolute;
-    inset: -1.2rem;
-    border-radius: 50%;
-    background: conic-gradient(from 0deg, var(--main-color), var(--accent), var(--main-color));
-    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - .3rem), #000 calc(100% - .2rem));
-    mask: radial-gradient(farthest-side, transparent calc(100% - .3rem), #000 calc(100% - .2rem));
-    animation: spin 6s linear infinite;
-    z-index: -1;
-}
-
-/* Agrandissement au survol via "scale" : n'entre pas en conflit avec l'animation de flottement */
+/* Zoom léger au survol */
 .home-img img {
     transition: scale .4s ease, box-shadow .4s ease;
 }
 
 .home-img img:hover {
-    scale: 1.05;
+    scale: 1.035;
 }
 
 /* 6. Apparition au défilement (activée par script.js) */
@@ -1222,4 +1203,16 @@ section::before {
 
 .modal.open .modal-content {
     animation: modalIn .35s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.scroll-progress {
+    display: none !important;
+}
+
+.header.hide {
+    translate: 0 0 !important;
+}
+
+.btn::after {
+    display: none !important;
 }
